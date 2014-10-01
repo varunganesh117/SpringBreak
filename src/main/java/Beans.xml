@@ -5,7 +5,11 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id="helloWorld" class="springbreak.HelloWorld">
+   <bean id="greeter" class="springbreak.Greeter" scope="singleton" destroy-method="destroy">
        <property name="message" value="Hello World!"/>
+   </bean>
+   
+   <bean class="springbreak.GreeterInit">
+       
    </bean>
 </beans>
