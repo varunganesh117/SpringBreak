@@ -18,6 +18,6 @@ public class Greeter implements InitializingBean {
 	}
 	
 	public void destroy(){
-		System.out.println("Goodbye...Destroying beans.");
+		System.out.println("Goodbye. Destroying beans.");
 	}
 }

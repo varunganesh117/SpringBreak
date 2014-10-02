@@ -8,13 +8,18 @@ public class MainApp {
 	public static void main(String[] args) {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 		
-		Greeter obj1 = (Greeter) context.getBean("greeter");
-		Greeter obj2 = (Greeter) context.getBean("greeter");
+		Greeter obj1 = (Greeter) context.getBean("greeterSingleton");
+		Greeter obj2 = (Greeter) context.getBean("greeterSingleton");
 		
 		System.out.println(obj1.getMessage());
-		obj1.setMessage("New Message");
+		obj1.setMessage("Verifying Singleton");
 		System.out.println(obj2.getMessage());
-
+		
+		TextEditor editor = (TextEditor) context.getBean("textEditor");
+		
+		editor.spellCheck();
+		editor.getLanguageList();
+		
 		context.registerShutdownHook();
 	}
 
