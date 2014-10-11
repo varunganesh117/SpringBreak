@@ -19,6 +19,8 @@ public class MainApp {
 		
 		editor.spellCheck();
 		editor.getLanguageList();
+		editor.getTextSize();
+		editor.getSpellChecker().getSpellCheckLevel();
 		
 		context.registerShutdownHook();
 	}
