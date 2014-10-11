@@ -18,7 +18,7 @@ public class MainApp {
 		TextEditor editor = (TextEditor) context.getBean("textEditor");
 		
 		editor.spellCheck();
-		editor.getLanguageList();
+		editor.getLanguageList(); 
 		editor.getTextSize();
 		editor.getSpellChecker().getSpellCheckLevel();
 		
